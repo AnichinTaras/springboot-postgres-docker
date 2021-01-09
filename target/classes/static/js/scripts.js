@@ -48,13 +48,13 @@ function validateuser(flag) {
                 document.getElementById("usersList").innerHTML = html;
             }
         };
-        xhttp.open("GET", "http://localhost:8080/users/findUserByLogin?login=" + login, true);
+        xhttp.open("GET", "https://spring-example-taras.herokuapp.com/users/findUserByLogin?login=" + login, true);
         xhttp.send();
     }
 
     function deleteUser(userId) {
         var xhttp = new XMLHttpRequest();
-        xhttp.open("DELETE", "http://localhost:8080/users/deleteUser/" + userId, true);
+        xhttp.open("DELETE", "https://spring-example-taras.herokuapp.com/users/deleteUser/" + userId, true);
         xhttp.send();
         loadUsers();
     }
@@ -66,7 +66,7 @@ function validateuser(flag) {
             var userLogin = document.getElementById("user_login").value;
             var userEmail = document.getElementById("user_email").value;
 
-            var url = "http://localhost:8080/users/editUser/";
+            var url = "https://spring-example-taras.herokuapp.com/users/editUser/";
 
             var data = {};
             data.name = userName;
@@ -98,7 +98,7 @@ function validateuser(flag) {
            var userEmail = document.getElementById("user_email").value;
 
            var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-           xmlhttp.open("POST", "http://localhost:8080/users/saveUser");
+           xmlhttp.open("POST", "https://spring-example-taras.herokuapp.com/users/saveUser");
            xmlhttp.setRequestHeader("Content-Type", "application/json");
 
 
@@ -134,7 +134,7 @@ function validateuser(flag) {
                 document.getElementById("usersList").innerHTML = html;
             }
         };
-        xhttp.open("GET", "http://localhost:8080/users/findAllUsers", true);
+        xhttp.open("GET", "https://spring-example-taras.herokuapp.com/users/findAllUsers", true);
         xhttp.send();
     }
 
