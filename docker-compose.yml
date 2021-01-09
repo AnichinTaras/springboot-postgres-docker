@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db:
+    image: "postgres"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: spring_docker_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ohonam22
+  app:
+    build: .
+    ports:
+      - "9000:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db/spring_docker_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: ohonam22
+    depends_on:
+      - db
