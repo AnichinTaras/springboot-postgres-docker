@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<center><h2>  Система запису всіх юзерів до бази даних  </h2></center>
+
+<table id="usersList">
+
+</table>
+
+<form action="#">
+    <input id="user_name" placeholder="User name">
+    <input id="user_login" placeholder="User login">
+    <input id="user_email" placeholder="User email">
+    <input id="user_idd" placeholder="userId">
+    <button onclick="createUser()">Create user</button>
+    <button onclick="editUserById()">Edit</button>
+</form>
+
+<input id="search_field">
+<button onclick="searchByLogin()">Search by Login</button>
+
+<script src = "js/scripts.js"></script>
+<script src="js/validate.js"></script>
+</body>
+</html>
